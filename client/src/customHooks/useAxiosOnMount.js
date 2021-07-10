@@ -9,7 +9,7 @@ const useAxiosOnMount = (url) => {
     useEffect(()=>{
         setTimeout(()=>{
             getData()
-        },2000)
+        },300)
     },[])
 
     const getData = async() => {
@@ -25,7 +25,7 @@ const useAxiosOnMount = (url) => {
         }
       }
     
-    return {data, loading, error}
+    return {data, loading, error, setData, getData}
 }
 export default useAxiosOnMount
 
