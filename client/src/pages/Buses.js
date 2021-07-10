@@ -5,6 +5,7 @@ import { Icon, Table } from 'semantic-ui-react'
 import useAxiosOnMount from '../customHooks/useAxiosOnMount'
 import BusForm from './BusForm'
 
+
 const Buses = () => {
     const { data, loading, error, setData, getData } = useAxiosOnMount('/api/buses')
 
@@ -25,6 +26,7 @@ const Buses = () => {
     const filterBuses = (id) => {
         setData(data.filter((d) => d.id !== id))
     }
+
 
     const renderData = () => {
         return (
@@ -70,6 +72,7 @@ const Buses = () => {
             <h1>Buses</h1>
             <BusForm data={data} setData={setData} getData={getData} />
             {renderData()}
+            
 
         </div>
     )
